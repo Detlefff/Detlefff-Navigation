@@ -6,15 +6,15 @@ class navigation extends Script
 
 	private $mode;
 
-    public function run()
-    {
+	public function run()
+	{
 		if($this->matches[1] === $this->matches[2]) {
 			return $this->send('So... You wanna drive from ' . $this->matches[1] . ' to exact the same place?');
 		} else {
-        	$url = 'https://maps.googleapis.com/maps/api/directions/json?mode=driving&origin=' . urlencode($this->matches[1]) . '&destination=' . urlencode($this->matches[2]) . '&sensor=false';
+			$url = 'https://maps.googleapis.com/maps/api/directions/json?mode=driving&origin=' . urlencode($this->matches[1]) . '&destination=' . urlencode($this->matches[2]) . '&sensor=false';
 			$response = file_get_contents($url);
 
-        	$response = json_decode($response);
+			$response = json_decode($response);
 
 			$imagePath = 'http://maps.googleapis.com/maps/api/staticmap?size=640x640&path=weight:3%7Ccolor:red%7Cenc:' . $response->routes[0]->overview_polyline->points . '&sensor=false';
 
