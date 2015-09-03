@@ -1,0 +1,2 @@
+/^navigation from (.*?) to (.*?)$/i
+/^(driving|walking|bike|biking|bicycling)? directions from (.+) to (.+)$/i
