@@ -2,7 +2,8 @@
 class navigation extends Script
 {
 	protected $description = 'Navigation-Plugin. Navigate from A to B';
-	protected $helpMessage = "'navigation from <START> to <DESTINATION>': Returns a map, containing the route from the start-point to the destination\n";
+	protected $helpMessage = "'navigation from <START> to <DESTINATION>': Returns a map, containing the route from the start-point to the destination\n
+	'nav from <START> to <DESTINATION>'\n'navi from <START> to <DESTINATION>'\n";
 
 	private $mode;
 
